@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquerymobile/jquery.mobile-1.3.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="jquerymobile/jquery-1.9.1.min.js"></script>
+	<script src="jquerymobile/jquery.mobile-1.3.0.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/cordova-2.5.0.js"></script>
+</head> 
+<body> 
+
+	<div data-role="page" id="lists">
+		<header data-role="header">
+			<h1>Listas de Gastos</h1>
+		</header><!-- /header -->
+		<div data-role="content">	
+			<p>Listas:</p>	
+			<ul id="listlist" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Pesquisar listas...">
+				<li>
+					<a href="#viewlist" id="list1" data-transition="slide">
+						<p>Supermercado</p>
+						<p>Domingo, 24 de Marco de 2013</p>
+						<span class="ui-li-count">2</span>
+						<p class="ui-li-aside">14:00</p>
+					</a>
+				</li>
+				<li>
+					<a href="#viewlist" id="list1" data-transition="slide">
+						<p>Casa</p>
+						<p>Domingo, 24 de Marco de 2013</p>
+						<span class="ui-li-count">4</span>
+						<p class="ui-li-aside">13:00</p>
+					</a>
+				</li>
+			</ul>
+		</div><!-- /content -->
+	
+		<div data-role="footer" class="ui-bar">
+			<div align="center">
+				<a data-inline="true" class="center-button" data-icon="plus" data-role="button" href="#newlist" data-transition="slide">Nova Lista</a>
+				<a data-inline="true" class="center-button" data-icon="delete" data-role="button" id="deletelists">Apagar Listas</a>
+			</div>
+		</div>
+	</div><!-- /page -->
+
+	<div data-role="page" id="viewlist">
+		<div data-role="header">
+			<h1>Supermercado</h1>
+			<a data-icon="arrow-l" data-role="button" data-direction="reverse" href="#lists" data-transition="slide">Voltar</a>
+		</div><!-- /header -->
+		<div data-role="content">	
+			<p>Gastos:</p>	
+			<div id="lists_div">
+				<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Pesquisar listas...">
+					<li>Produto 1<p class="ui-li-aside"><strong><big>R$ 50,00</big></strong></p></li>
+					<li>Produto 2<p class="ui-li-aside"><strong><big>R$ 20,00</big></strong></p></li>
+					<li>Produto 3<p class="ui-li-aside"><strong><big>R$ 45,50</big></strong></p></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li>Total<p class="ui-li-aside"><strong><big>R$ 115,50</big></strong></li>
+				</ul>
+			</div><!-- End #lists_div -->
+		</div><!-- /content -->
+	
+		<div data-role="footer" class="ui-bar">
+			<div align="center">
+				<a data-inline="true" class="center-button" data-icon="plus" data-role="button" href="#newitem" data-transition="slide">Novo Item</a>
+				<a data-inline="true" class="center-button" data-icon="delete" data-role="button" id="deletelists">Apagar Itens</a>
+			</div>
+		</div><!-- End .center -->
+	</div><!-- /page -->
+	
+	<div data-role="page" id="newlist">
+		<div data-role="header" data-backbtn="true" >
+			<h1>Nova Lista</h1>
+			<a data-icon="arrow-l" data-role="button" href="#lists" data-transition="slide" data-direction="reverse">Cancelar</a>
+		</div><!-- /header -->
+	
+		<div data-role="content">	
+			<form id="newlistform">
+				<label for="name">Nome:</label>
+				<input type="text" name="name" id="name" placeholder="Ex: Lista 1" />
+				<input type="submit" value="Criar" data-icon="check" data-iconpos="left" data-theme="b" data-transition="slide" data-direction="reverse">
+			</form>
+		</div><!-- /content -->
+	
+		<footer data-role="footer">
+			<h1></h1>
+		</footer>
+	</div><!-- /page -->
+	
+	<div data-role="page" id="newitem">
+		<div data-role="header" data-backbtn="true" >
+			<h1>Novo Item</h1>
+			<a data-icon="arrow-l" data-role="button" href="#viewlist" data-transition="slide" data-direction="reverse">Cancelar</a>
+		</div><!-- /header -->
+		<div data-role="content">	
+			<form id="newlistform">
+				<label for="name">Nome:</label>
+				<input type="text" name="name" id="name" placeholder="Ex: Produto 1" />
+				<label for="price">Pre&ccedilo:</label>
+				<input type="number" name="price" id="price"  />
+				<input type="submit" value="Criar" data-icon="check" data-iconpos="left" data-theme="b" data-transition="slide" data-direction="reverse">
+			</form>
+		</div><!-- /content -->
+	
+		<div data-role="footer">
+			<h1></h1>
+		</div>
+	</div><!-- /page -->
+</body>
+</html>
