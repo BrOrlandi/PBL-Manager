@@ -16,22 +16,35 @@
 	
 	<h1 id="problema">Problema</h1>
 	<p id="prob_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<p><span id="n_tarefas">#</span> Tarefas.</p>
-	<br />
 	
 	<h1>Usuários:</h1>
 	<p><span id="n_usuarios">#</span> Usuários.</p>
 	<form id="form_cadastrar_usuario">
 		<label for="nome">Nome:</label><input id="nome_usuario" name="nome" type="text"/>
 		<label for="email">E-mail:</label><input id="email_usuario" name="email" type="text"/>
-		<input type="button" id="button_cadastrar_usuario" value="Cadastrar Usuário"/>
+		<input type="submit" id="button_cadastrar_usuario" value="Cadastrar Usuário"/>
 	</form>
+	<ul id="lista_usuarios" data-role="listview">
+	</ul>
+	<br/>
+
 	
-<ul id="lista_usuarios" data-role="listview">
-
-		</ul>
-
-
+	<h1>Tarefas:</h1>
+	<p><span id="n_tarefas">#</span> Tarefas.</p>
+	<form id="form_cadastrar_tarefa">
+		<label for="nome">Nome:</label><input id="nome_tarefa" name="nome" type="text"/>
+		<label for="desc">Descrição:</label><input id="desc_tarefa" name="desc" type="text"/>
+		<label for="status" class="select">Select, native menu</label>
+		<select name="status" id="status_tarefa">
+		    <option value="0">Pendente</option>
+		    <option value="1">Em Andamento</option>
+		    <option value="2">Concluído</option>
+		</select>
+		<label for="data">Data Entrega:</label><input id="data_entrega_tarefa" name="data" type="date"/>
+		<input type="submit" id="button_cadastrar_tarefa" value="Cadastrar Tarefa"/>
+	</form>
+	<ul id="lista_tarefas" data-role="listview">
+	</ul>
+	
 </body>
 </html>
