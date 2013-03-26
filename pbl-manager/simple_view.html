@@ -1,16 +1,37 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<title>My Page</title> 
+	<title>My Page</title>
+	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="jquerymobile/jquery.mobile-1.3.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<script src="jquerymobile/jquery-1.9.1.min.js"></script>
 	<script src="jquerymobile/jquery.mobile-1.3.0.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/core.js"></script>
 	<script src="js/cordova-2.5.0.js"></script>
 </head> 
 <body> 
+	
+	<h1 id="problema">Problema</h1>
+	<p id="prob_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p><span id="n_tarefas">#</span> Tarefas.</p>
+	<br />
+	
+	<h1>Usuários:</h1>
+	<p><span id="n_usuarios">#</span> Usuários.</p>
+	<form id="form_cadastrar_usuario">
+		<label for="nome">Nome:</label><input id="nome_usuario" name="nome" type="text"/>
+		<label for="email">E-mail:</label><input id="email_usuario" name="email" type="text"/>
+		<input type="button" id="button_cadastrar_usuario" value="Cadastrar Usuário"/>
+	</form>
+	
+<ul id="lista_usuarios" data-role="listview">
+
+		</ul>
+
 
 </body>
 </html>
