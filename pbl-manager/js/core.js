@@ -27,7 +27,7 @@ var getProblema= function(){
 var Problema = function(titulo, descricao){
 	this.titulo = titulo;
 	this.descricao = descricao;
-	this.tarefas = new Array();
+//	this.tarefas = new Array();
 //	this.usuarios = new Array();
 }
 
@@ -38,6 +38,7 @@ var Tarefa = function(id, titulo, descricao, status, data_entrega){
 	this.status = status;
 	this.data_criacao = $.now();
 	this.data_entrega = data_entrega;
+	this.usuarios = new Array();
 }
 
 var Usuario = function(id,nome,email){

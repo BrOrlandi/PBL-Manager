@@ -1,3 +1,9 @@
+/*
+$(document).on( 'pageinit','#pagetest', function(){
+  alert( 'This page was just enhanced by jQuery Mobile!' );
+});
+*/
+
 $(document).on("pageinit", function(){
 
 //$('#listlist').
@@ -5,7 +11,6 @@ var prob = getProblema();
 
 $('#problema').html(prob.titulo);
 $('#prob_desc').html(prob.descricao);
-
 var users_data = loadUsuarios();
 
 $('#n_usuarios').html(users_data.users.length);
@@ -40,6 +45,8 @@ $('#button_cadastrar_tarefa').click(function() {
 	var data = $('#data_entrega_tarefa').val();
 	cadastrarTarefa(nome,desc,status,data);
 });
+
+
 
 });
 
