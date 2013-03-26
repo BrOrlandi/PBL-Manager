@@ -11,7 +11,9 @@ var users_data = loadUsuarios();
 $('#n_usuarios').html(users_data.users.length);
 
 users_data.users.forEach(function(user){
-	$('#lista_usuarios').append('<li user_id="'+user.id+'"><a href="#">'+user.nome+'<p></p><p>'+user.email+'</p></a></li>');
+	var hash = CryptoJS.MD5(user.email);
+	var link = 'http://www.gravatar.com/avatar/' + hash;
+	$('#lista_usuarios').append('<li user_id="'+user.id+'"><a href="#"><img src="'+ link +'">'+user.nome+'<p></p><p>'+user.email+'</p></a></li>');
 });
 $('#lista_usuarios').listview('refresh');
 
