@@ -88,7 +88,7 @@ var loadUsuarios = function(){
 		var users_new = new Array();
 		users_data.lastID = -1;
 		users_data.users = users_new;
-		saveUsers(user_data);
+		saveUsers(users_data);
 		users_return = users_data;
 	}
 	else
